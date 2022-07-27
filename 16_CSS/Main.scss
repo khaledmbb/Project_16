@@ -1,0 +1,18 @@
+// Helpers Links
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "Sass/Helpers/variables";
+@import "Sass/Helpers/mixin";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap');
+
+// Components Links
+
+@import "Sass/Components/buttons";
+@import "Sass/Components/headings";
+
+// Layout Links
+
+@import "Sass/pages/globalPage";
+@import "Sass/Layout/Grid";
+@import "Sass/Layout/Header";
+@import "Sass/Pages/HomePage";
+@import "Sass/Layout/Footer";

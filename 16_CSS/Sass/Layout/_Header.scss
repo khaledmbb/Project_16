@@ -1,0 +1,38 @@
+/* Start Slider */
+header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid $white;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    @include prefixer(user-select, none, webkit moz o ms);
+    cursor: pointer;
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      margin: 0;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  nav ul {
+    display: flex;
+    background: $red;
+    border-radius: 3px;
+    a {
+      color: white;
+      @include prefixer(transition, .2s, webkit moz o ms);
+    }
+    li {
+      @include prefixer(transition, .2s, webkit moz o ms);
+      padding: 15px 20px;
+      &.active,&:hover {
+        background-color: $grey;
+      }
+    }
+  }
+}
+/* End Slider */

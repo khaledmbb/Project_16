@@ -1,0 +1,18 @@
+body {
+  background-color: #f6f6f6;
+  text-transform: capitalize;
+  font: {
+    family: 'Raleway', sans-serif;
+    size: 16px;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      cursor: pointer;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+}

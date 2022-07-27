@@ -1,0 +1,9 @@
+.container {
+  padding: 10px 200px 10px 200px;
+  @include media(md) {
+    padding: 10px 100px 10px 100px;
+  }
+  @include media(xs) {
+    padding: 10px 50px 10px 50px;
+  }
+}

@@ -1,0 +1,84 @@
+// media query for divices
+
+@mixin media($mediaSize) {
+  @if $mediaSize == 'xs' {
+    @media (max-width:420px) {
+      @content;
+    }
+  } @else if $mediaSize == 'sm' {
+    @media (max-width:576px) {
+      @content;
+    }
+  } @else if $mediaSize == 'md' {
+    @media (max-width:768px) {
+      @content;
+    }
+  } @else if $mediaSize == 'lg' {
+    @media (max-width:992px){
+      @content;
+    }
+  } @else if $mediaSize == 'xl' {
+    @media (max-width:1200px) {
+      @content;
+    }
+  } @else if $mediaSize == 'xxl' {
+    @media (max-width:1400px) {
+      @content;
+    }
+  }
+}
+
+// Before or After
+
+@mixin before($b_bg_color) {
+  content: '';
+  position: absolute;
+  transition: .4s ease-in-out;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: darkcyan;
+}
+
+// prefixer
+
+@mixin prefixer($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property} : $value;
+  }
+  #{$property}: $value;
+}
+
+// prefixer animation 
+
+@mixin animation($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+// Mixin Opacity for Enternet Explorer
+
+@mixin opacity($value) {
+  zoom: 1;
+  $opacity: $value * 100;
+  filter: alpha(opacity = $opacity);
+  opacity: $value;
+}
+
+// For Transition Values
+
+@mixin transition($par...) {
+  -webkit-transition: $par;
+  -moz-transition: $par;
+  -o-transition: $par;
+  -ms-transition: $par;
+  transition: $par;
+}
